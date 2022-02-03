@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Backpacking in Maine</title>
+    <style>
+      h1 {
+        color: white;
+        text-align: center;
+        font-family: "Gothic A1", sans-serif;
+        padding: 15px;
+      }
+      hr {
+        margin: 0 auto;
+        width: 50%;
+        margin-bottom: 20px;
+      }
+
+      .two {
+        margin: 0 auto;
+        width: 50%;
+        margin-top: 20px;
+        margin-bottom: 20px;
+      }
+      h2 {
+        text-align: center;
+        color: white;
+        font-family: "Gothic A1", sans-serif;
+        font-weight: lighter;
+        padding: 10px;
+        margin-right: 90px;
+        margin-left: 90px;
+        font-size: 20px;
+      }
+      .container {
+        background: radial-gradient(
+          circle at 1% 100%,
+          rgb(118, 147, 88) 0%,
+          rgb(118, 147, 83) 15.9%,
+          rgb(42, 89, 58) 15.9%,
+          rgb(42, 89, 58) 24.4%,
+          rgb(19, 30, 37) 24.5%,
+          rgb(19, 30, 37) 66%
+        );
+        max-width: 600px;
+        margin: 0 auto;
+        border-radius: 10px;
+      }
+      p {
+        text-align: center;
+        color: white;
+        font-family: "Gothic A1", sans-serif;
+        padding: 10px;
+        margin-right: 90px;
+        margin-left: 90px;
+        font-size: 15px;
+        line-height: 150%;
+      }
+      img {
+        display: block;
+        margin: 0 auto;
+        border-radius: 4px;
+        border: 5px solid white;
+      }
+      .learnMore {
+        color: white;
+        text-decoration: none;
+        font-family: "Gothic A1", sans-serif;
+        padding: 10px;
+        margin-left: 90px;
+        font-size: 10px;
+      }
+      .learnMore:hover {
+        text-decoration: underline;
+      }
+      button {
+        display: block;
+        margin: 0 auto;
+        color: #131e25;
+        padding: 10px;
+        margin-top: 50px;
+        margin-bottom: 20px;
+        font-family: "Quattrocento Sans", sans-serif;
+        font-weight: bold;
+        border-radius: 4px;
+        font-size: 15 px;
+      }
+      button:hover {
+        color: white;
+        background: #9fcaf9;
+      }
+      footer {
+        margin-left: 90px;
+        font-family: "Gothic A1", sans-serif;
+        padding: 10px;
+        font-size: 12px;
+        color: white;
+      }
+      .personal {
+        color: white;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h1>Backpacking in Maine</h1>
+
+      <h2>
+        If you want to sleep under the stars, disconnect, and immerse yourself
+        in nature while walking all day... <em> backpacking is for you! </em>
+      </h2>
+      <hr />
+      <br />
+      <img
+        src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/026/306/original/Bigelow.jpg?1643853298"
+        alt="Mountain"
+        width="300"
+      />
+      <br />
+      <hr class="two" />
+      <p>
+        Maine offers some of the most remote and spectacular backpacking on the
+        East Coast. The famed <strong> '100-mile Wilderness' </strong> section
+        of the Appalachian Trail does not cross a single paved road, nor does it
+        pass through any towns. Baxter State Park is a mecca for backpackers,
+        with the centerpiece being Katahdin, the most alpine (and arguably most
+        beautiful) mountain east of the Mississippi River.
+      </p>
+      <a
+        href="https://newenglandwaterfalls.com/backpackingme.php"
+        target="_blank"
+        class="learnMore"
+      >
+        Learn more on New England Waterfalls
+      </a>
+      <button>Connect with awesome backpackers 🌄</button>
+
+      <footer>
+        Coded by
+        <a
+          href="https://www.linkedin.com/in/ponsjulia/"
+          target="_blank"
+          class="personal"
+        >
+          Julia Pons
+        </a>
+      </footer>
+    </div>
+    <script>
+      function connect() {
+        let name = prompt("What is your name?");
+        let email = prompt("What is your email address?");
+        let experience = prompt("How many backpacking trips have you been on?");
+
+        if (experience < 1) {
+          alert(
+            "Thanks " +
+              name +
+              "! We'll be in touch to connect you with some awesome new backpackers and a guide!"
+          );
+        } else {
+          if (experience >= 1 && experience <= 5) {
+            alert(
+              "Thanks " +
+                name +
+                "! We'll be in touch to connect you with some awesome beginner backpackers and a guide!"
+            );
+          } else {
+            if (experience > 5 && experience <= 8) {
+              alert(
+                "Thanks " +
+                  name +
+                  "! We'll be in touch to connect you with some awesome, intermediate backpackers!"
+              );
+            } else {
+              if (experience > 8) {
+                alert(
+                  "Thanks " +
+                    name +
+                    "! We'll be in touch to connect you with some awesome, experienced backpackers!"
+                );
+              }
+            }
+          }
+        }
+      }
+
+      let button = document.querySelector("button");
+      button.addEventListener("click", connect);
+    </script>
+  </body>
+</html>
